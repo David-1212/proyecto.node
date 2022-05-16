@@ -6,7 +6,11 @@ Alumno: Vargas López David Guadalupe.
 Kubernetes:
 4.-minikube start
 5.-kompose convert (solo en caso de no tener los archivos. yaml del repositorio de GitHub
-6.-kubectl apply -f • api-deployment.yaml • api-service.yaml • webmvc-deployment.yaml • webmvc-	service.yaml
+6.-kubectl apply -f
+  • api-deployment.yaml 
+  • api-service.yaml 
+  • webmvc-deployment.yaml 
+  • webmvc-	service.yaml
 7.-kubectl get pods
 8.-kubectl get services
 9.-kubectl port-forward api 3000:3000
