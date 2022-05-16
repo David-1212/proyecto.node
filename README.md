@@ -1,20 +1,29 @@
-# Título del Proyecto
+# Proyecto v1
 
-_Acá va un párrafo que describa lo que es el proyecto_
+Es un proyecto realizado en node.js con el fin de ejemplificar el uso de docker, kubernetes(minikube), ademas de istio y cheekymonkey.
 
-## Comenzando 🚀
+## GitHub 🚀
+```
+1.-Clonar el repositorio (con el comando “git clone https://github.com/David-1212/proyect”) Docker (Tomando 	en cuenta que se clono el repositorio de github con todos los archivos de este.)
+```
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+### Kubernetes: 📋
 
-Mira **Deployment** para conocer como desplegar el proyecto.
-
-
-### Pre-requisitos 📋
-
-_Que cosas necesitas para instalar el software y como instalarlas_
 
 ```
-Da un ejemplo
+minikube start
+	kompose convert (solo en caso de no tener los archivos. yaml del repositorio de GitHub)
+	kubectl apply -f 
+		• api-deployment.yaml 
+		• api-service.yaml 
+		• webmvc-deployment.yaml 
+		• webmvc-service.yaml
+	kubectl get pods
+	kubectl get services
+	kubectl port-forward api 3000:3000
+	kubectl port-forward webmvc-api 4001:4001
+	minikube dashboard
+	minikube dashboard --url 
 ```
 
 ### Instalación 🔧
