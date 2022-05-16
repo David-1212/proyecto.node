@@ -11,105 +11,43 @@ Es un proyecto realizado en node.js con el fin de ejemplificar el uso de docker,
 
 
 ```
-minikube start
-	kompose convert (solo en caso de no tener los archivos. yaml del repositorio de GitHub)
-	kubectl apply -f 
-		• api-deployment.yaml 
-		• api-service.yaml 
-		• webmvc-deployment.yaml 
-		• webmvc-service.yaml
-	kubectl get pods
-	kubectl get services
-	kubectl port-forward api 3000:3000
-	kubectl port-forward webmvc-api 4001:4001
-	minikube dashboard
-	minikube dashboard --url 
+2.-minikube start
+3.-kompose convert (solo en caso de no tener los archivos. yaml del repositorio de GitHub)
+4.-kubectl apply -f 
+	• api-deployment.yaml 
+	• api-service.yaml 
+	• webmvc-deployment.yaml 
+	• webmvc-service.yaml
+5.-kubectl get pods
+6.-kubectl get services
+7.-kubectl port-forward api 3000:3000
+8.-kubectl port-forward webmvc-api 4001:4001
+9.-minikube dashboard
+10.-minikube dashboard --url 
 ```
 
-### Instalación 🔧
-
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
-
-_Dí cómo será ese paso_
+### Istio 🔧
 
 ```
-Da un ejemplo
+11.-Si no se tiene istio, instalar istioctl.
+12.-Comprobar la instalación con el comando “istioctl”
+13.-Comando injected: kubectl label namespace default istio-injection=enabled
+14.-Aplicar los servicios tal como se hizo anteriormente en el paso 3 de Kubernetes.
+15.-Con el commando “kubectl port-forward kiali -n istio-system 20001” se hace llamada a kiali dentro del 	puerto 20001
+16.-Acceder en el navegador a localhost:20001
 ```
 
-_Y repite_
+## cheekymonkey ⚙️
 
 ```
-hasta finalizar
+17.- Instalar los requerimentos con el comando "pip install -r requirements.txt"
+18.- utilizar el comando "python cheekymonkey.py --exclude kube-system cert-manager istio-system" para correr el programa
 ```
 
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
+###Elaborado por: ⌨️
 
-## Ejecutando las pruebas ⚙️
 
-_Explica como ejecutar las pruebas automatizadas para este sistema_
-
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
 
 ```
-Da un ejemplo
+Vargas López David Guadalupe
 ```
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-## Despliegue 📦
-
-_Agrega notas adicionales sobre como hacer deploy_
-
-## Construido con 🛠️
-
-_Menciona las herramientas que utilizaste para crear tu proyecto_
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
-
-## Contribuyendo 🖇️
-
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-## Wiki 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
-
-## Versionado 📌
-
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
-
-## Autores ✒️
-
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
-
-## Expresiones de Gratitud 🎁
-
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* Dona con cripto a esta dirección: `0xf253fc233333078436d111175e5a76a649890000`
-* etc.
-
-
-
----
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
